@@ -2,7 +2,7 @@
 
 	'use strict'
 
-	angular.module('BeerFinder')
+	angular.module('Beer411')
 
 	.controller('UserCtrl',['$scope', 'UserFactory', '$location',
 

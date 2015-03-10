@@ -4,7 +4,7 @@
 	'use strict';
 
 
-	angular.module('BeerFinder')
+	angular.module('Beer411')
 
 	.controller('NavCtrl', ['$scope', 'UserFactory',
 
