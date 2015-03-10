@@ -2,13 +2,13 @@
  
  'use strict';
 
- angular.module('BeerFinder', ['ngRoute', 'ngCookies'])
+ angular.module('Beer411', ['ngRoute', 'ngCookies'])
 
  .constant('SERVER', {
 
    //rootUrl:'https';
    
-   URL: 'https://geniussports.herokuapp.com/',
+   URL: 'https://calm-scrubland-8623.herokuapp.com',
    
    CONFIG: {
      
