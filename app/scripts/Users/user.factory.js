@@ -8,6 +8,16 @@
 
 		function ($http, SERVER, $cookieStore, $location) {
 
+			//get current user
+			var currentUser = function () {
+				return $cookieStore.get*('currentUser');
+			};
+
+			//check user status
+
+
+
+
 			//register
 				$http.post(SERVER.URL + 'user' + userObj + SERVER.CONFIG)
 					.success( function (res) {
@@ -30,9 +40,16 @@
       					);
           			};
 
+          	//var logoutUser = function () {
+          	//	$cookieStore.remove('currentUser');
+          	//	$location.path('/login');
+          	}
+
           	return {
           		register: registerUser;
           		login: loginUser;
+          		user: currentUser;
+          	//	logout: logoutUser
 
           		};
 

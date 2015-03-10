@@ -7,6 +7,14 @@
 	.controller('UserCtrl',['$scope', 'UserFactory', '$location',
 
 		function ($scope, UserFactory, $location) {
+				
+				//Check to see if user is already logged in
+				var user = UserFactory.user();
+					if (user) {
+						return $location.path('/');
+
+					};
+				 
 				//register 
 				$scope.register = function (userObj) {
 					  	UserFactory.register({user: userObj});
