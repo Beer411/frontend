@@ -11,7 +11,7 @@
 			 // Register a User
       			var registerUser = function (userObj) {
         
-        			$http.post(SERVER.URL + 'user', userObj, SERVER.CONFIG)
+        			$http.post(SERVER.URL + 'users', userObj, SERVER.CONFIG)
           				.success( function (res) {
             			console.log(res.user.id);
             			SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
@@ -25,7 +25,7 @@
       		//login
       		var loginUser = function (userObj) {
 
-      			 $http.post(SERVER.URL + 'user/sign_in', userObj, SERVER.CONFIG)
+      			 $http.post(SERVER.URL + 'users/sign_in', userObj, SERVER.CONFIG)
           			.success( function (res) {
             				SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
             				$location.path('/yourteams/' + res.user.id);
