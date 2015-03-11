@@ -11,6 +11,7 @@
             // Add a new user
             $scope.registerUser = function (userObj) {
             UserFactory.register(userObj);
+            console.log(userObj);
              };
 
             // Login Method

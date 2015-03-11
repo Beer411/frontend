@@ -8,7 +8,7 @@
 
    //rootUrl:'https';
    
-   URL: 'https://calm-scrubland-8623.herokuapp.com',
+   URL: 'https://calm-scrubland-8623.herokuapp.com/',
    
    CONFIG: {
      
@@ -25,7 +25,7 @@
       $routeProvider
 
         // Login Page
-          .when('/', {
+          .when('/login', {
             templateUrl: '/scripts/users/user.login.tpl.html',
             controller: 'UserCtrl'
           })
