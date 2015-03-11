@@ -6,21 +6,23 @@
 
   .controller('UserCtrl', ['$scope', 'UserFactory', '$location', 
 
-    function ($scope, UserFactory, $location) {
+        function ($scope, UserFactory, $location) {
 
-      // Register Method
-      $scope.registerUser = function (userObj) {
-         console.log(userObj);
-          UserFactory.register({user: userObj});
-      };
+            // If Currently Logged in - Leave this controller
+            var user = UserFactory.user();
+              if (user) {
+                return $location.path('/');
+              }
 
-      // Login Method
-      $scope.loginUser = function (userObj) {
-        // console.log(userObj);
-        UserFactory.login({user: userObj});
-      };
+            // Add a new user
+            $scope.registerUser = function (userObj) {
+            UserFactory.register(userObj);
+             };
 
-
+            // Login Method
+            $scope.loginUser = function (userObj) {
+            UserFactory.login(userObj);
+            };
     
     }
 

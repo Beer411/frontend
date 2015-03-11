@@ -8,6 +8,14 @@
 
 		function ($http, SERVER, $cookieStore, $location) {
 
+
+
+			//Get the current user
+				var currentUser = function () {
+					return $cookieStore.get('currentUser')
+			};	
+
+
 			 // Register a User
       			var registerUser = function (userObj) {
         
