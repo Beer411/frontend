@@ -26,22 +26,16 @@
 
         // Login Page
           .when('/', {
-            templateUrl: '/scripts/users/login.tpl.html',
+            templateUrl: '/scripts/users/user.login.tpl.html',
             controller: 'UserCtrl'
           })
 
         // Register Page 
           .when('/register', {
-            templateUrl: '/scripts/users/register.tpl.html',
+            templateUrl: '/scripts/users/user.register.tpl.html',
             controller: 'UserCtrl'
           })
-
-        //main page
-          .when('/team', {
-          templateUrl: '/scripts/users/main.tpl.html',
-          controller: 'UserCtrl'
-          })
-  
+         
         // Go Home ET
         .otherwise('/');
    
