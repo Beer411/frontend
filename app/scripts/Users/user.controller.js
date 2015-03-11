@@ -1,35 +1,29 @@
-;(function () {
+;(function (){
+  
+  'use strict';
 
-	'use strict'
+  angular.module('Beer411')
 
-	angular.module('Beer411')
+  .controller('UserCtrl', ['$scope', 'UserFactory', '$location', 
 
-	.controller('UserCtrl',['$scope', 'UserFactory', '$location',
+    function ($scope, UserFactory, $location) {
 
-		function ($scope, UserFactory, $location) {
-				
-				//Check to see if user is already logged in
-				var user = UserFactory.user();
-					if (user) {
-						return $location.path('/');
+      // Register Method
+      $scope.registerUser = function (userObj) {
+        // console.log(userObj);
+        UserFactory.register({user: userObj});
+      };
 
-					};
-				 
-				//register 
-				$scope.register = function (userObj) {
-					  	UserFactory.register({user: userObj});
-      					};
-
-
+      // Login Method
+      $scope.loginUser = function (userObj) {
+        // console.log(userObj);
+        UserFactory.login({user: userObj});
+      };
 
 
-      			//login
-      			$scope.login =function (userObj) {
-      					UserFactory.login({user: userObj});
+    
+    }
 
-      					};
-				}
-
-		}];
+  ]);
 
 }());

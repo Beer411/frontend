@@ -17,96 +17,23 @@
     <!-- endbuild -->
   </head>
   <body>
-
-
-    <div class="contain-to-grid" sticky>
-      <nav class="top-bar" data-topbar role="navigation" ng-controller="NavCtrl">
-      
-        <ul class="title-area">
-          <li class="name">
-            <h1><a href="#/">Beer411</a></h1>
-          </li>
-        </ul>
-      
-        <section class="top-bar-section">
-          <!-- Right Nav Section -->
-          <ul class="right">
-            <li><a ng-hide="loggedin" href="#/login">Login</a></li>
-            <li><a ng-hide="loggedin" href="#/register">Register</a></li>
-            <li><a ng-show="loggedin" href="#" ng-click="logout()">Logout</a></li>
-          </ul>
-        </section>
-
-      </nav>
-    </div>
-         
-  
-      <div class="row">
-        <div class="large-12 columns">
-          
-          
-           
-         
-        </div>
-      </div>
-      
-       
-      
-      
-       
-      
-      <div class="row">
-      
-        <div class="large-8 columns">
-        
-        </div>
-        
-        <div class="large-4 columns">
-        
-           
-          
-          <ul class="small-block-grid-3">
-           
-          </ul>
-        </div>
-            
-      </div>
-      
-      
-       
-      <div class="row">
-        <div class="large-12 columns">
-        
-          
-        </div>
-      </div>
-      
-      
-       
-      
-      <footer class="row">
-        <div class="large-12 columns">
-          <hr/>
-          <div class="row">
-            <div class="large-6 columns">
-            
-          </div>
-        </div> 
-      </footer>
-    
+       <div class="container row">
+          <div class="large-12 columns" ng-view></div>
+       </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.min.js"></script>
     <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/foundation/js/foundation.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/layout/nav.controller.js"></script>
-    
     <script src="scripts/users/user.controller.js"></script>
     <script src="scripts/users/user.factory.js"></script>
 
