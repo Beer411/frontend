@@ -36,26 +36,14 @@
             controller: 'UserCtrl'
           })
 
-   // Your Teams Page
-   //.when('/yourteams/:id', {
-   // templateUrl: '/scripts/users/teams.tpl.html',
-   //  controller: 'UserCtrl'
-   //})
-
-   // The Team Page
-   //.when('/team', {
-   //  templateUrl: '/scripts/users/main.tpl.html',
-   //  controller: 'UserCtrl'
-   //})
-
-   // Add Team Page
-   //.when('/add-team', {
-   //  templateUrl: '/scripts/users/add-team.tpl.html',
-   //  controller: 'UserCtrl'
-   //})
-
-   // Go Home ET
-   //.otherwise('/');
+        //main page
+          .when('/team', {
+          templateUrl: '/scripts/users/main.tpl.html',
+          controller: 'UserCtrl'
+          })
+  
+        // Go Home ET
+        .otherwise('/');
    
  }]);
 

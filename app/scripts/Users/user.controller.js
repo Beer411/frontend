@@ -10,8 +10,8 @@
 
       // Register Method
       $scope.registerUser = function (userObj) {
-        // console.log(userObj);
-        UserFactory.register({user: userObj});
+         console.log(userObj);
+          UserFactory.register({user: userObj});
       };
 
       // Login Method
