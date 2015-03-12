@@ -48,10 +48,66 @@
 
 
        <div class="container row">
-          <div class="large-12 columns" ng-view>
-
-          </div>  
+          <div class="small-4 columns" ng-view></div>
        </div>
+
+
+      <section class="search">
+        <div class="row">
+          <div class="small-12 large-10 columns small-centered">
+            <h2>Find a Beer! </h2>
+            <form class="custom">
+              <div class="row">
+                <div class="large-3 small-12 columns">
+                  <label>
+                    Beer Type:
+                  </label>
+
+                <select>
+                  <option value="All">All</option>
+                  <option value="Dark">Dark</option>
+                  <option value="Light">Light</option>
+                  <option value="Cheap">Cheap</option>
+                  <option value="High Alcohol">High Alcohol</option>
+                </select>
+          </div>
+          <div class="large-3 small-6 columns">
+            <label>
+              Price Range:
+            </label>
+              <select>
+                <option value="0-5">&#36;0-&#36;5</option>
+                <option value="5-10">&#36;5-&#36;10</option>
+                <option value="10-15">&#36;10-&#36;15</option>
+                <option value="15-20">&#36;15-&#36;20</option>
+                <option value="20-25">&#36;20-&#36;25</option>
+                <option value="25-30">&#36;25-&#36;30</option>
+                <option value="more">more than &#36;30</option>
+              </select>
+          </div>
+          <div class="large-3 small-6 columns">
+            <label>
+             Location:
+              </label>
+              <select>
+                <option value="mile"> near me</option>
+                <option value="2-mile">2 miles</option>
+                <option value="5-mile">5 miles</option>
+                <option value="25-mile">25 miles</option>
+                <option value="more-mile">more</option>
+              </select>
+          </div>
+          <div class="large-3 small-12 columns expand">
+            <a href="#" class="button expand">Search</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+              
+       
+    
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/angular/angular.min.js"></script>
@@ -59,7 +115,7 @@
     <script src="../bower_components/angular-cookies/angular-cookies.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../bower_components/foundation/js/foundation.js"></script>
+    <script src="../bower_components/foundation/js/foundation.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -73,10 +129,10 @@
     
     
 
-    <!--<script src="scripts/lists/lists.controller.js"></script>
+    <script src="scripts/lists/lists.controller.js"></script>
     <script src="scripts/lists/lists.factory.js"></script>
 
-    <script src="scripts/items/items.controller.js"></script>
+    <!--<script src="scripts/items/items.controller.js"></script>
     <script src="scripts/items/items.factory.js"></script>
     <!-- endbuild -->
 

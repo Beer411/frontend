@@ -16,7 +16,15 @@
           				cache: true
 				});
 			};
-		])
+
+			 return {
+        		get : getAllLists
+        
+      			};
+
+		}
+
+	])			
 
 }());
 

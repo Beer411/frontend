@@ -4,7 +4,7 @@
 
 	angular.module('Beer411')
 
-	.controller('listCtrl', ['$scope', 'ListsFactory', '$cacheFactory',
+	.controller('ListCtrl', ['$scope', 'ListsFactory', '$cacheFactory',
 
 		function ($scope, ListsFactory, $cacheFactory) {
 

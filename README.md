@@ -1,8 +1,7 @@
-## Yo, I'm a Readme
+Welcom to Beer411
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+This app is designed to catalogue the favorite Beers of the users and list the Beers and the business's that serve them in the Atlanta area.
 
 
-  <li><a class="nav-button" href="#/login">Login</a></li>
-  <li><a class="nav-button" href="#/register">Register</a></li>
-  <li><a class="nav-button" href="#/logout">Logout</a></li>    
+
+  

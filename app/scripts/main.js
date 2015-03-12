@@ -35,6 +35,12 @@
             templateUrl: '/scripts/Users/user.register.tpl.html',
             controller: 'UserCtrl'
           })
+
+        //lists
+          //.when('/', {
+          //  templateUrl: '/scripts/lists/lists.tpl.html',
+          //  controller: 'ListCtrl'
+          //})
          
         // Go Home ET
         .otherwise('/');
