@@ -10,7 +10,7 @@
 
 				var user = UserFactory.user();
 
-				var getAllLists = function () {
+				var searchLists = function () {
 					 return $http.get(SERVER.URL + 'beers/Lists', {
 					 	headers: SERVER.CONFIG.headers,
           				cache: true

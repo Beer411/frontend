@@ -1,13 +1,11 @@
 <h2>Beer 411 lists</h2>
 
+
 <input type="text" ng-model="searchtext" placeholder="Filter">
 
 <hr>
 	<ul class="Beerlists">
-  		<li ng-repeat="l in lists | filter:searchtext | orderBy: 'title' "><a href="#/lists/{{ l.objectId }}">{{ l.title }}</a><span ng-click="deleteMe(l.objectId, $index)">X</span></li>  
+  		<li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.objectId }}">{{ l.name }}</a> 
 	</ul>
 
-	<ul class="Barlists">
-		<li ng-repeat="l in lists | filter:searchtext | orderBy: 'title' "><a href="#/lists/{{ l.objectId }}">{{ l.title }}</a>
-		<span ng-click="deleteMe(l.objectId, $index)">X</span></li>
-	</ul>
+	
