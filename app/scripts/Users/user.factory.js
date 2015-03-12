@@ -27,7 +27,9 @@
                   //console.log(userObj);
         			$http.post(SERVER.URL + 'users', {user: userObj})
           				.success( function (res) {	
-          			}
+          			    
+                }
+
         			);
 
       			};
