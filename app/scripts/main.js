@@ -26,20 +26,34 @@
 
         // Login Page
           .when('/login', {
-            templateUrl: '/scripts/users/user.login.tpl.html',
+            templateUrl: '/scripts/Users/user.login.tpl.html',
             controller: 'UserCtrl'
           })
 
         // Register Page 
           .when('/register', {
-            templateUrl: '/scripts/users/user.register.tpl.html',
+            templateUrl: '/scripts/Users/user.register.tpl.html',
             controller: 'UserCtrl'
           })
          
         // Go Home ET
         .otherwise('/');
    
- }]);
+ }])
 
+
+        .run([ '$rootScope', 'UserFactory', 'SERVER',
+
+            function ($rootScope, UserFactory, SERVER) {
+
+              $rootScope.$on('$routeChangeStart', function () {
+        
+              // Run my Login Status
+              UserFactory.status();
+           })
+    
+         }
+
+      ])
 
 }());
