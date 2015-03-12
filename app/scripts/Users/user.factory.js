@@ -30,8 +30,9 @@
                   console.log(userObj);
                 
                 $http.post(SERVER.URL + 'users/sign_in', {user: userObj})
-                  .success( function (res) {
-                    $cookieStore.put('currentUser', res.data);
+                   SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
+                      $location.path('/' + res.user.id);
+
                   });
                              
             };
