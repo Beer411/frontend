@@ -8,25 +8,15 @@
 
 		function ($http, SERVER, $cookieStore, $location) {
 
-          //Get current user
-            var currentUser = function () {
-              return $cookieStore.get('currentUser');
-              console.log('currentUser');
-            };
-			     
-          //check User status
-            var checkLoginStatus = function () {
-              var user = currentUser();
-                if (user) {
-                  SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
-                }
-            };
-
            // Register a User
-      			  var registerUser = function (userObj) {
-                  //console.log(userObj);
-        			$http.post(SERVER.URL + 'users', {user: userObj})
-          				.success( function (res) {	
+      			   var registerUser = function (userObj) {
+        
+                  $http.post(SERVER.URL + 'users', {user: userObj})
+                    .success( function (res) {
+                      console.log(res.user.id);
+                        SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
+                        $location.path('/' + res.user.id);   
+                  
           			    
                 }
 
@@ -46,11 +36,6 @@
                              
             };
 
-          //logout User
-              var logoutUser = function () {
-                $cookieStore.remove('currentUser');
-                $location.path = ('/login');
-              };
       
 
           	
@@ -58,9 +43,7 @@
           	return {
           		register : registerUser,
         		  login : loginUser,
-              user : currentUser,
-              status : checkLoginStatus,
-              logout : logoutUser
+          
           		};
 
           	}

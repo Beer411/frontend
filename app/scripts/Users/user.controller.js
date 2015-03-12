@@ -9,10 +9,10 @@
         function ($scope, UserFactory, $location) {
 
             //If currently logged in then
-             var user = UserFactory.user();
-              if (user) {
-              return $location.path('/');
-              }
+            // var user = UserFactory.user();
+            //  if (user) {
+            // return $location.path('/');
+            //  }
 
 
 
