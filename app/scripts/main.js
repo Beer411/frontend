@@ -39,21 +39,7 @@
         // Go Home ET
         .otherwise('/');
    
- }])
+  }]);
 
-
-        .run([ '$rootScope', 'UserFactory', 'SERVER',
-
-            function ($rootScope, UserFactory, SERVER) {
-
-              $rootScope.$on('$routeChangeStart', function () {
-        
-              // Run my Login Status
-              UserFactory.status();
-           })
-    
-         }
-
-      ])
 
 }());

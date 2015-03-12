@@ -22,7 +22,7 @@
 
         
         <div class="contain-to-grid">
-            <nav class="top-bar" data-topbar>
+             <nav class="top-bar" data-topbar>
               <ul class="title-area">
                 <li class="name">
                   <h1>
@@ -34,26 +34,22 @@
               <section class="top-bar-section">
              
                 <ul class="right">
-                   <li><a class="nav-button" href="#/login">Login</a></li>
-                   <li><a class="nav-button" href="#/register">Register</a></li>
-                   <!--<li><a class="nav-button" href="#" ng-click="logout()">Logout</a></li>-->    
+                  <li class="divider"></li>
+                  <li class="nav-button"><a href="#/login">login</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-button"><a href="#/register">register</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-button"><a href="#/logout">logout</a></li>
+                  <li class="divider"></li>
                 </ul>
               </section>
             </nav>
         </div>
 
 
-
        <div class="container row">
-          <div class="large-12 columns">
+          <div class="large-12 columns" ng-view>
 
-                <div class="small-3 columns">
-                    <p>This area is for the items input menu. The user should be able to input data that will flow into the array of beers</p>
-                </div>
-
-
-                <div class="small-4 columns">
-                    <p>This area is for the list menu. Here users will be able to access several differentr lists to help them find the beer they crave.</p>
           </div>  
        </div>
     <!-- build:js scripts/vendor.js -->
@@ -74,6 +70,7 @@
     
     <script src="scripts/users/user.controller.js"></script>
     <script src="scripts/users/user.factory.js"></script>
+    
     
 
     <!--<script src="scripts/lists/lists.controller.js"></script>
