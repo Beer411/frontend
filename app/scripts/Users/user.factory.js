@@ -17,7 +17,7 @@
         
                   $http.post(SERVER.URL + 'users', {user: userObj})
                     .success( function (res) {
-                      //console.log(res.user.id);
+                      
                        
                       }
 

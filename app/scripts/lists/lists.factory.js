@@ -9,16 +9,22 @@
 			function ($http, SERVER, UserFactory) {
 
 				var user = UserFactory.user();
-
+				//get list of beers
 				var searchLists = function () {
 					 return $http.get(SERVER.URL + 'beers/Lists', {
-					 	headers: SERVER.CONFIG.headers,
           				cache: true
 				});
 			};
 
+
+				var getLists = function () {
+					return $http.get(SERVER.URL + 'bars/Lists', {
+						cache: true
+					});
+				};
+
 			 return {
-        		get : getAllLists
+        		get : getLists
         
       			};
 
