@@ -5,7 +5,7 @@
 // Custom Styles
 
 body {
-	//background-image: url("http://static.squarespace.com/static/51d25265e4b065321a7daf2e/t/51e3202ce4b0e2abc3eb1d1e/1373839404916/Beer-paddle.jpg");
+	background-image: url("http://static.squarespace.com/static/51d25265e4b065321a7daf2e/t/51e3202ce4b0e2abc3eb1d1e/1373839404916/Beer-paddle.jpg");
 }
 	
 
@@ -15,6 +15,12 @@ body {
 
 }
 
+.intro p {
+  color: white;
+  text-align: center;
+  font-size: 200%;
+}
+
 
 .large-12 { 
   text-align: center;
@@ -22,17 +28,19 @@ body {
 }
 
 .Items {
+  color: black;
+  background: #E8E8CF;
   border-style: solid;
-  border-color: white;
+  border-color: black;
 }
 .Items h4 {
   color: white;
-  float: left;
+  text-align: center;
 
 }
 
 .Items p {
-  color: white;
+  color: black;
   float: left;
 }
 

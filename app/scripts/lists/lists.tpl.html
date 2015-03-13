@@ -10,7 +10,7 @@
 
 	<ul class="lists">
 	<!--<p>Lists {{ lists }}</p>-->
-  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'title' "><a href="#/lists/{{ l.objectId }}">{{ l.name }}{{l.address}}</a> 
+  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.objectId }}">{{ l.name }}</a> 
   		 </li>   
 	</ul>
 
