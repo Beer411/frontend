@@ -8,7 +8,6 @@
 
 			function ($http, SERVER, UserFactory) {
 
-				//var user = UserFactory.user();
 				//get list of beers
 				var getBeerLists = function () {
 					 return $http.get(SERVER.URL + 'beers/Lists', {
