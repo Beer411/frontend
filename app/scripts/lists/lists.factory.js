@@ -8,27 +8,32 @@
 
 			function ($http, SERVER, UserFactory) {
 
-				var user = UserFactory.user();
+				//var user = UserFactory.user();
 				//get list of beers
-				var searchLists = function () {
+				var getBeerLists = function () {
 					 return $http.get(SERVER.URL + 'beers/Lists', {
           				cache: true
 				});
 			};
 
+			 	return {
+        			get : getBeerLists
+        			
+      			};
 
-				var getLists = function () {
+				//get list of bars
+				var getBarLists = function () {
 					return $http.get(SERVER.URL + 'bars/Lists', {
 						cache: true
 					});
 				};
 
-			 return {
-        		get : getLists
-        
-      			};
 
-		}
+				return {
+					get : getBarLists
+				};      			
+
+			}
 
 	])			
 

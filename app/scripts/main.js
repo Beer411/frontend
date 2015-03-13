@@ -36,11 +36,17 @@
             controller: 'UserCtrl'
           })
 
-        //lists
-          //.when('/', {
-          //  templateUrl: '/scripts/lists/lists.tpl.html',
-          //  controller: 'ListCtrl'
-          //})
+          //Beers list
+          .when('/beers', {
+            templateUrl: '/scripts/lists/lists.tpl.html',
+            controller: 'ListCtrl'
+          })
+
+          //Bars list
+          .when('/bars', {
+            templateUrl: '/scripts/lists/lists.tpl.html',
+            controller: 'ListCtrl'
+          })
          
         // Go Home ET
         .otherwise('/');

@@ -16,15 +16,10 @@
       			   var registerUser = function (userObj) {
         
                   $http.post(SERVER.URL + 'users', {user: userObj})
-                    .success( function (res) {
-                      
-                       
-                      }
-
+                    .success( function (res) {  
+                     }
         			     );
-
       			     };
-
 
       		    //login
                 var loginUser = function (userObj) {
@@ -34,10 +29,9 @@
                     .success( function (res) {
                     //console.log(userObj);                   
                     $cookieStore.put('currentUser', res.data);
-
                  }
-              );               
-            };
+               );               
+             };
 
               // Logout Method
                 var logoutUser = function () {
@@ -49,10 +43,10 @@
 
           	
 
-          	return {
-          		register : registerUser,
-        		  login : loginUser,
-              logout: logoutUser,
+          	     return {
+          		      register : registerUser,
+        		        login : loginUser,
+                    logout: logoutUser,
              
           
           		};
