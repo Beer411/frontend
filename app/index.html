@@ -22,7 +22,7 @@
 
         
         <div class="contain-to-grid">
-             <nav class="top-bar" data-topbar>
+             <nav class="top-bar" data-topbar role="navigation" ng-controller="NavCtrl">
               <ul class="title-area">
                 <li class="name">
                   <h1>
@@ -48,8 +48,8 @@
 
 
        <div class="container row">
-          <div class="small-4 columns" ng-view></div>
-       </div>
+          <div class="large-12 columns" ng-view></div>
+       
 >
       <div class="row">
         <div class="small-12 columns">
@@ -76,8 +76,8 @@
           <div class="Lists">
             <h4>List view</h4>
               <ul class="button-group even-2">
-                <li><a href="#" ng-click="getBeerLists ()" class="button success">Beer List</a></li>
-                <li><a href="#" ng-click="getBarLists ()" class="button alert">Bar List</a></li>
+                <li><a href="#" ng-click="getBeerLists" class="button success">Beer List</a></li>
+                <li><a href="#" ng-click="getBarLists" class="button alert">Bar List</a></li>
                 <p>Hit the search buttons to view our list of Beers and Bars. If there is a beer or bar you would like to add please see the item input field</p>
               </ul>
           </div>
@@ -124,7 +124,7 @@
         </div> 
       </footer>
               
-       
+    </div>   
     
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -139,6 +139,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <script src="scripts/Navigation/nav.controller.js"></script>
    
    
     

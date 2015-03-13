@@ -12,6 +12,8 @@
 
 			  ListsFactory.get().success( function (response) {
         			$scope.lists = response.results;
+
+        			console.log(response.results);
       				});
 		}
 	])
