@@ -10,12 +10,12 @@
     
       var user = UserFactory.user();
 
-      if (user) {
-        $scope.loggedin = true;
-        $scope.user = user;
-      } else {
-        $scope.loggedin = false;
-      }
+        if (user) {
+          $scope.loggedin = true;
+          $scope.user = user;
+        } else {
+          $scope.loggedin = false;
+        }
 
 
       $scope.logout = function () {

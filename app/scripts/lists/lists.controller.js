@@ -8,13 +8,20 @@
 
 		function ($scope, ListsFactory, $cacheFactory) {
 
-			 var cache = $cacheFactory.get('$http');
+			 //var cache = $cacheFactory.get('$http');
 
-			  ListsFactory.get().success( function (response) {
-        			$scope.lists = response.results;
 
-        			console.log(response.results);
+			 $scope.lists = [];
+
+			  ListsFactory.getBeers().success( function (response) {
+        			$scope.lists = response.beer;
+        			console.log(response.beer);
       				});
+
+			  ListsFactory.getBars().success( function (response) {
+			  		$scope.lists = response.bar;
+			  		console.log(response.bar);
+			  		});
 		}
 	])
 

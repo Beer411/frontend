@@ -8,17 +8,7 @@
 
 		function ($http, SERVER, $cookieStore, $location) {
 
-              // Get Current User
-                var currentUser = function () {
-                  return $cookieStore.get('currentUser');
-                };
-
-              // Check User Status
-                var checkLoginStatus = function () {
-                  var user = currentUser();
-                    SERVER.CONFIG.headers["authentication_token"] = res.authentication_token;
-                      $location.path('/' + res.user.id);                   
-                };
+              
 
               // Register a User
       			   var registerUser = function (userObj) {
@@ -46,6 +36,10 @@
                   $location.path('/login');
               }
 
+              var currentUser = function () {
+                return '';
+              }
+
       
 
           	
@@ -53,9 +47,8 @@
           	     return {
           		      register : registerUser, 
                     login : loginUser,
-                    user : currentUser,
-                    status : checkLoginStatus,
-                    logout : logoutUser
+                    logout : logoutUser,
+                    user: currentUser
           
           		};
 
