@@ -27,24 +27,25 @@ body {
   font-size: 200%;
 }
 
-.Items {
+.Left {
   color: black;
   background: #E8E8CF;
   border-style: solid;
   border-color: black;
 }
-.Items h4 {
-  color: white;
+.Left h4 {
+  color: black;
   text-align: center;
 
 }
 
-.Items p {
+.Left p {
   color: black;
   float: left;
 }
 
-.Lists {
+.Right {
+
   color: black;
   background: #E8E8CF;
   border-style: solid;
@@ -52,21 +53,39 @@ body {
 
 }
 
-.Lists h4 {
-  color: white;
+.Right h4 {
+  color: black;
   text-align: center;
   
 }
 
-.Lists p {
+.Right p {
   margin-top: 100px;
   color: black;  
   float: right;
 }
 
-h2 {
+.ng-scope {
   color: white;
 }
 
+
+}
+.lists, .items {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative;
+    font-size: 25px;
+    border-left: 3px solid #000;
+    display: block;
+    padding-left: 15px;
+    background-color: #E8E8CF;
+    
+  }
+}
 
   
