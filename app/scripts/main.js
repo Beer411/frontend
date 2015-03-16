@@ -49,16 +49,16 @@
           })
 
           //add item to Beers list
-          //.when('/beers', {
-          // templateUrl: '/scripts/items/items.beers.tpl.html',
-          //  controller: 'ItemsCtrl'
-          //})
+          .when('beers/lists:id', {
+           templateUrl: '/scripts/items/items.beers.tpl.html',
+            controller: 'ItemsCtrl'
+          })
 
           //add items to Bars list
-          //.when('/bars', {
-          //  templateUrl: 'scripts/items/items.bars.tpl.html',
-          //  controller: 'ItemsCtrl'
-          //})
+          .when('bars/lists:id', {
+            templateUrl: 'scripts/items/items.bars.tpl.html',
+            controller: 'ItemsCtrl'
+          })
          
         // Go Home ET
         .otherwise('/');
