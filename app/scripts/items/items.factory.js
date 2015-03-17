@@ -15,37 +15,40 @@
 
 
 			//get list of beers
-			var getBeerLists = function () {
-				 return $http.get(SERVER.URL + 'beers/list', {
+			var getBeerLists = function (listId) {
+				 return $http.get(SERVER.URL + '/beers', {
 
 				});
 			};
 
 			//get list of bars
 			var getBarLists = function (listId) {
-				return $http.get(SERVER.URL + 'bars/list',{
+				return $http.get(SERVER.URL + '/bars', {
 	
 				});
 			};
 
+
 			//adding a beer
-			var addBeerItem = function (itemObj) {
-				return $http.post(SERVER.URL + '/beers' + itemObj);
+			var addBeer = function (itemObj) {
+				 //console.log(itemObj);
+				 return $http.post(SERVER.URL + 'beers', itemObj);
+				
 			
 
 			};
 			//adding a bar
-			var addBarItem = function (itemObj) {
-				return $http.post(SERVER.URL + '/bars' + itemObj);
+			var addBar = function (itemObj) {
+				return $http.post(SERVER.URL + 'bars', itemObj);
 				
 			};
 
 
 			return {
-				listBeerName: getBeerLists,
-				listBarName: getBarLists,
-				addBeers: addBeerItem,
-				addBars: addBarItem
+				getBeers: getBeerLists,
+				getBars: getBarLists,
+				addBeers: addBeer,
+				addBars: addBar
 				
      		};
     	}	

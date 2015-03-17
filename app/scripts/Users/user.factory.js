@@ -14,7 +14,7 @@
       			   var registerUser = function (userObj) {
                   $http.post(SERVER.URL + 'users', {user: userObj})
                     .success( function (res) { 
-                        //console.log*(res); 
+                        console.log*(res); 
                      }
         			     );
       			     };
@@ -24,8 +24,9 @@
                   //console.log(userObj);
                   $http.post(SERVER.URL + 'users/sign_in', {user: userObj})
                     .success( function (res) {
-                    //console.log(userObj);                   
-                    $cookieStore.put('currentUser', res.data);
+
+                    $cookieStore.put('currentUser', res.user.authentication_token);
+
                  }
                );               
              };

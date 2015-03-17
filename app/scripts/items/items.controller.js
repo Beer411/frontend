@@ -7,65 +7,58 @@
 
 	.controller('ItemsCtrl', ['$scope', 'ItemsFactory', '$routeParams',
 
-		function ($scope, ItemsFactory, $routeParams) {
-
-			$scope.listBeerName = '';
-			$scope.listBarName = '';		
-			$scope.items = [];
-
-			 ItemsFactory.listBeerName($routeParams.id).success ( function (data) {
-        		$scope.listBeerName = data.name;
-      			});
-
-      		ItemsFactory.get($routeParams.id).success( function (data) {
-        		$scope.items = data.results;
-      			});
+			function ($scope, ItemsFactory, $routeParams) {
 
 
-			$scope.addBeers = function (itemObj) {
-        		ItemsFactory.add(itemObj, $routeParams.id)
-          			.success( function (res) {
-            			$scope.item = {};
-            			$scope.items.push(itemObj);
-          				}
-        			);
-      			};
+				$scope.getBeers = '';
+				$scope.getBars = '';
+				$scope.items = [];
+			
+
+				ItemsFactory.getBeers().success( function (response) {
+        			$scope.items = response.beer;
+        			//console.log(response.beer);
+      				});
+
+			 	//adding Beers
+			  	$scope.addBeers = function(itemObj) {
+			  		console.log(itemObj);
+			  		ItemsFactory.addBeers(itemObj)
+			  		.success( function (res) {
+			  			$scope.item = {};
+			  			$scope.items.push(itemObj);
 
 
-      			ItemsFactory.listBarName($routeParams.id).success (function (data) {
-      				$scope.listBarName = data.name;
-      			});
+			  			}
+			  		);
 
-      			ItemsFactory.get($routeParams.id).success( function (data) { 
-      				$scope.items = data.results;
-      			});
+			  	};
 
-      		$scope.addBars = function (itemObj) {
-      			Itemsfactory.add(itemObj, $routeParams.id)
-      			.success( function (res) {
-      				$scope.item = {};
-      				$scope.items.push(itemObj);
-      				}
-      			);
+			  	ItemsFactory.getBars().success( function (response) {
+			  		$scope.items = response.bar;
+			  		//console.log(response.bar);
+			  		});
 
-      		};
-      			
+			  	//adding Bars
+				$scope.addBars = function(itemObj) {
+					ItemsFactory.addBars(itemObj)
+					.success( function (res) {
+						$scope.item = {};
+						$scope.items.push(itemObj);
 
+						}
 
+					);
+				};
 
 
 
 
 
-      		
-      		
 
+			  }
 
-
-
-		}
-
-
-	]);
+		])
+	
 
 }());

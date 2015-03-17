@@ -4,9 +4,9 @@
 
 	angular.module('Beer411')
 
-	.controller('ListCtrl', ['$scope', 'ListsFactory', '$cacheFactory',
+	.controller('ListCtrl', ['$scope', 'ListsFactory',
 
-		function ($scope, ListsFactory, $cacheFactory) {
+		function ($scope, ListsFactory) {
 
 			 //var cache = $cacheFactory.get('$http');
 

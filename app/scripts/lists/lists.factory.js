@@ -13,7 +13,7 @@
 				
 				//get list of beers
 				var getBeerLists = function () {
-					 return $http.get(SERVER.URL + 'beers/list', {
+					 return $http.get(SERVER.URL + '/beers', {
           				//cache: true
 				});
 			};
@@ -21,7 +21,7 @@
 
 				//get list of bars
 				var getBarLists = function () {
-					return $http.get(SERVER.URL + 'bars/list', {
+					return $http.get(SERVER.URL + '/bars', {
 						//cache: true
 					});
 				};
