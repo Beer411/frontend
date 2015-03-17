@@ -14,8 +14,7 @@
 			//get list of beers
 			var getBeerLists = function () {
 				 return $http.get(SERVER.URL + 'beers/list', {
-				 	console.log(res);
-          	
+
 				});
 			};
 
@@ -29,21 +28,21 @@
 			//adding a beer
 			var addBeerItem = function (itemObj) {
 				$http.post(SERVER.URL + '/beers' + itemObj);
-				.success(function (res);
+				console.log(itemObj);
 
 			};
 			//adding a bar
 			var addBarItem = function (itemObj) {
 				$http.post(SERVER.URL + '/bars' + itemObj);
-				.success(function (res);
+				
 			};
-s
+
 
 			return {
-				getBeers = getBeerLists,
-				getBars = getBarLists,
-				addBeers = addBeerItem,
-				addBars = addBarItem,
+				getBeers: getBeerLists,
+				getBars: getBarLists,
+				addBeers: addBeerItem,
+				addBars: addBarItem,
 			}
 
 

@@ -49,14 +49,14 @@
           })
 
           //add item to Beers list
-          .when('beers/lists:id', {
-           templateUrl: '/scripts/items/items.beers.tpl.html',
+          .when('/addBeers', {
+           templateUrl: '/scripts/items/items.beers.lists.tpl.html',
             controller: 'ItemsCtrl'
           })
 
           //add items to Bars list
-          .when('bars/lists:id', {
-            templateUrl: 'scripts/items/items.bars.tpl.html',
+          .when('/addBars', {
+            templateUrl: 'scripts/items/items.bars.lists.tpl.html',
             controller: 'ItemsCtrl'
           })
          

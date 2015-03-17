@@ -12,9 +12,9 @@
 		
 			$scope.items = [];
 
-			$scope.addItem = function (itemObj) {
+			$scope.addItems = function (itemObj) {
 				ItemsFactory.add(itemObj)
-				success.( function (res) {
+				.success (function (res) {
 					$scope.item = {};
 					$scope.items.push(itemObj);
 				});
