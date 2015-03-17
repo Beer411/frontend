@@ -17,18 +17,12 @@
         		$scope.listBeerName = data.name;
       			});
 
-			 ItemsFactory.listBarName($routeParams.id).success (function (data) {
-			 	$scope.listBarName = data.name
-			 });
-
       		ItemsFactory.get($routeParams.id).success( function (data) {
         		$scope.items = data.results;
       			});
 
 
-
-
-			$scope.addItem = function (itemObj) {
+			$scope.addBeers = function (itemObj) {
         		ItemsFactory.add(itemObj, $routeParams.id)
           			.success( function (res) {
             			$scope.item = {};
@@ -36,6 +30,38 @@
           				}
         			);
       			};
+
+
+      			ItemsFactory.listBarName($routeParams.id).success (function (data) {
+      				$scope.listBarName = data.name;
+      			});
+
+      			ItemsFactory.get($routeParams.id).success( function (data) { 
+      				$scope.items = data.results;
+      			});
+
+      		$scope.addBars = function (itemObj) {
+      			Itemsfactory.add(itemObj, $routeParams.id)
+      			.success( function (res) {
+      				$scope.item = {};
+      				$scope.items.push(itemObj);
+      				}
+      			);
+
+      		};
+      			
+
+
+
+
+
+
+
+      		
+      		
+
+
+
 
 		}
 
