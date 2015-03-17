@@ -4,11 +4,14 @@
 
 	angular.module('Beer411')
 
-	.controller('ItemsFactory', ['$http', 'SERVER', 'UserFactory',
+	.factory('ItemsFactory', ['$http', 'SERVER', 'UserFactory',
 
 		function ($http, SERVER, UserFactory) {
 
 			var user = UserFactory.user();
+
+
+			
 
 
 			//get list of beers
@@ -27,28 +30,25 @@
 
 			//adding a beer
 			var addBeerItem = function (itemObj) {
-				$http.post(SERVER.URL + '/beers' + itemObj);
-				console.log(itemObj);
+				return $http.post(SERVER.URL + '/beers' + itemObj);
+			
 
 			};
 			//adding a bar
 			var addBarItem = function (itemObj) {
-				$http.post(SERVER.URL + '/bars' + itemObj);
+				return $http.post(SERVER.URL + '/bars' + itemObj);
 				
 			};
 
 
 			return {
-				getBeers: getBeerLists,
-				getBars: getBarLists,
+				listBeerName: getBeerLists,
+				listBarName: getBarLists,
 				addBeers: addBeerItem,
-				addBars: addBarItem,
-			}
-
-
-
-		}
-
-	])
+				addBars: addBarItem
+				
+     		};
+    	}	
+  	])
 
 }());

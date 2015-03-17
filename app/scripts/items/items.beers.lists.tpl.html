@@ -1,42 +1,18 @@
 <h2>Add New Beer</h2>
-<form ng-submit="addItems(item)">
+<form ng-submit="addItem(item)">
   
-      <div class="row">
-        <div class="small-5 columns">
+      <div class="small-5 columns">
+
           <input ng-model="item.name" type="text" placeholder="Beer Name">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.flavor_profile1" type="text" placeholder="Hoppy">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.flavor_profile2" type="text" placeholder="Delicious">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.flavor_profile3" type="text" placeholder="Fruity">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.flavor_profile4" type="text" placeholder="Refreshing">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.flavor_profile5" type="text" placeholder="Tasty">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.description" type="text" placeholder="Description">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.kind" type="text" placeholder="Beer Type">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.brewery" type="text" placeholder="Brewery">
-        </div>
-        <div class="small-5 columns">
           <input ng-model="item.abv" type="text" placeholder="abv">
-        </div>
-        
-
-
+          <button>Add Items</button>
       </div>
-  
- 
-  
 </form>
