@@ -1,7 +1,7 @@
 <h2>Beer411 registration page</h2>
-<form ng-submit="registerUser(user)">
+<form ng-submit="registerUser(user)" ng-controller="UserCtrl">
   <input ng-model="user.email" type="email" placeholder="Email">
-  <input ng-model="user.password" type="password" placeholder="Password">
+  <input ng-model="user.password" type="password" placeholder="8 character password">
   <button>Create User</button>
   <a href="#/">already registered? back to login</a>
 

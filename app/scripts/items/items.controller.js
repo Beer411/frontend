@@ -20,27 +20,26 @@
         			//console.log(response.beer);
       				});
 
+
+				ItemsFactory.getBars().success( function (response) {
+			  		$scope.items = response.bar;
+			  		console.log(response.bar);
+			  		});
+
 			 	//adding Beers
 			  	$scope.addBeers = function(itemObj) {
-			  		console.log(itemObj);
+			  		//console.log(itemObj);
 			  		ItemsFactory.addBeers(itemObj)
 			  		.success( function (res) {
 			  			$scope.item = {};
 			  			$scope.items.push(itemObj);
-
-
 			  			}
 			  		);
-
-			  	};
-
-			  	ItemsFactory.getBars().success( function (response) {
-			  		$scope.items = response.bar;
-			  		//console.log(response.bar);
-			  		});
+			  	}
 
 			  	//adding Bars
 				$scope.addBars = function(itemObj) {
+					//console.log(itemObj);
 					ItemsFactory.addBars(itemObj)
 					.success( function (res) {
 						$scope.item = {};
@@ -51,12 +50,8 @@
 					);
 				};
 
-
-
-
-
-
 			  }
+
 
 		])
 	

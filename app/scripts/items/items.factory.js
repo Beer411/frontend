@@ -16,14 +16,14 @@
 
 			//get list of beers
 			var getBeerLists = function (listId) {
-				 return $http.get(SERVER.URL + '/beers', {
+				 return $http.get(SERVER.URL + 'beers', {
 
 				});
 			};
 
 			//get list of bars
 			var getBarLists = function (listId) {
-				return $http.get(SERVER.URL + '/bars', {
+				return $http.get(SERVER.URL + 'bars', {
 	
 				});
 			};
@@ -39,6 +39,7 @@
 			};
 			//adding a bar
 			var addBar = function (itemObj) {
+				//console.log(itemObj);
 				return $http.post(SERVER.URL + 'bars', itemObj);
 				
 			};
