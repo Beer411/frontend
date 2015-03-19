@@ -10,6 +10,7 @@
 
 			var user = UserFactory.user();
 
+			
 
 			
 
@@ -31,8 +32,7 @@
 
 			//adding a beer
 			var addBeer = function (itemObj) {
-				 //console.log(itemObj);
-				 return $http.post(SERVER.URL + 'beers', itemObj);
+				 return $http.post(SERVER.URL + 'beers', itemObj + {user: authentification_token});
 				
 			
 
@@ -49,7 +49,8 @@
 				getBeers: getBeerLists,
 				getBars: getBarLists,
 				addBeers: addBeer,
-				addBars: addBar
+				addBars: addBar,
+				user : currentUser
 				
      		};
     	}	

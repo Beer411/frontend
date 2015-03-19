@@ -5,14 +5,15 @@
 
 	angular.module('Beer411')
 
-	.controller('ItemsCtrl', ['$scope', 'ItemsFactory', '$routeParams',
+	.controller('ItemsCtrl', ['$scope', 'ItemsFactory',
 
 			function ($scope, ItemsFactory, $routeParams) {
 
 
 				$scope.getBeers = '';
 				$scope.getBars = '';
-				$scope.items = [];
+				$scope.Items = [];
+			
 			
 
 				ItemsFactory.getBeers().success( function (response) {
@@ -28,9 +29,10 @@
 
 			 	//adding Beers
 			  	$scope.addBeers = function(itemObj) {
-			  		//console.log(itemObj);
+			  		console.log(itemObj);
 			  		ItemsFactory.addBeers(itemObj)
 			  		.success( function (res) {
+			  			//console.log(res);
 			  			$scope.item = {};
 			  			$scope.items.push(itemObj);
 			  			}
@@ -51,6 +53,8 @@
 				};
 
 			  }
+
+
 
 
 		])
