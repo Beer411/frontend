@@ -5,8 +5,6 @@
  angular.module('Beer411', ['ngRoute', 'ngCookies'])
 
  .constant('SERVER', {
-
-   //rootUrl:'https';
    
    URL: 'https://calm-scrubland-8623.herokuapp.com/',
    
@@ -63,7 +61,28 @@
         // Go Home ET
         .otherwise('/');
    
-  }]);
+  }])
+        .run([ '$rootScope', 'UserFactory', 'SERVER',
+
+            function ($rootScope, UserFactory, SERVER) {
+
+              $rootScope.$on('$routeChangeStart', function () {
+        
+        // Run my Login Status
+                UserFactory.status();
+
+      })
+    
+   }
+
+
+      // inject $rootScope
+      // put an $on on $rootScope
+      // watch for $onRouteChangeStart
+      // run UserFactory.status
+
+
+  ])
 
 
 }());

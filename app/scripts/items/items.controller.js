@@ -12,7 +12,7 @@
 
 				$scope.getBeers = '';
 				$scope.getBars = '';
-				$scope.Items = [];
+				$scope.items = [];
 			
 			
 
@@ -32,7 +32,6 @@
 			  		console.log(itemObj);
 			  		ItemsFactory.addBeers(itemObj)
 			  		.success( function (res) {
-			  			//console.log(res);
 			  			$scope.item = {};
 			  			$scope.items.push(itemObj);
 			  			}
@@ -41,7 +40,6 @@
 
 			  	//adding Bars
 				$scope.addBars = function(itemObj) {
-					//console.log(itemObj);
 					ItemsFactory.addBars(itemObj)
 					.success( function (res) {
 						$scope.item = {};

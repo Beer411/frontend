@@ -11,7 +11,7 @@
               //get current user
                 var currentUser = function () {
                   return $cookieStore.get('currentUser');
-                  console.log(currentUser);
+
                 };
 
               // Register a User
@@ -25,9 +25,9 @@
 
                 //check user status
                 var checkLoginStatus = function () {
-                  var user = currentUser ();
-                  if (user) {
-                    SERVER.CONFIG.headers['authentification_token'] = user.auth_token;
+                  var auth = currentUser ();
+                  if (auth) {
+                    SERVER.CONFIG.headers['auth-token'] = auth;
                   }
                 };
 
