@@ -37,13 +37,13 @@
           //Beers list
           .when('/beers', {
             templateUrl: '/scripts/lists/lists.Beers.tpl.html',
-            controller: 'ListCtrl'
+            controller: 'ListBeersCtrl'
           })
 
           //Bars list
           .when('/bars', {
             templateUrl: '/scripts/lists/lists.Bars.tpl.html',
-            controller: 'ListCtrl'
+            controller: 'ListBarsCtrl'
           })
 
           //add item to Beers list

@@ -50,6 +50,8 @@
      <hr>              
 
        <div class="container row">
+          <p>Welcome to Beer411</p>
+          <p>Your place to find that special Beer or Bar</p>
           <div class="large-12 columns" ng-view></div>
        
 
@@ -63,40 +65,41 @@
                 </div>
       
      
-  
-                <div class="small-12 columns">
-                    <div class="small-5 columns">
-                      <div class="Left">
-                        <h4>Item input fields</h4>
-                          <ul class="stack button-group">
-                            <li><a href='#/addBeers' class="button success">Add a Beer</a></li>
-                            <li><a href='#/addBars' class="button alert">Add a Bar</a></li>
-                            <p>Here users can input their favorite beer to our ever growing list. Please note you have to follow the instructions on what to input as its language specific in some cases</p>
-                          </ul>
+                    <div  class="buttonboxes">
+                     <div class="small-12 columns">
+                        <div class="small-5 columns">
+                          <div class="Left">
+                            <h4>Item input fields</h4>
+                              <ul class="stack button-group">
+                                <li><a href='#/addBeers' class="button success">Add a Beer</a></li>
+                                <li><a href='#/addBars' class="button alert">Add a Bar</a></li>
+                                <p>Here users can input their favorite beer to our ever growing list. Please note you have to follow the instructions on what to input as its language specific in some cases</p>
+                              </ul>
+                          </div>
+                        </div>
+                        
+                        <div class="small-5 columns">
+                          <div class="Right">
+                            <h4>List view</h4>
+                              <ul class="stack button-group">
+                                <li><a href='#/beers' class="button success">Beer List</a></li>
+                                <li><a href='#/bars' class="button alert">Bar List</a></li>
+                                <p>Hit the search buttons to view our list of Beers and Bars. If there is a beer or bar you would like to add please see the item input field</p>
+                              </ul>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    
-                    <div class="small-5 columns">
-                      <div class="Right">
-                        <h4>List view</h4>
-                          <ul class="stack button-group">
-                            <li><a href='#/beers' class="button success">Beer List</a></li>
-                            <li><a href='#/bars' class="button alert">Bar List</a></li>
-                            <p>Hit the search buttons to view our list of Beers and Bars. If there is a beer or bar you would like to add please see the item input field</p>
-                          </ul>
-                      </div>
-                    </div>
-                </div> 
-        
-     
-    
+                     </div> 
+
+
      
        
       
       
               
         
-      </div>   
+      </div>
+    </div>   
     
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -122,7 +125,8 @@
     
     
 
-    <script src="scripts/lists/lists.controller.js"></script>
+    <script src="scripts/lists/lists.Beers.controller.js"></script>
+    <script src="scripts/lists/lists.Bars.controller.js"></script>
     <script src="scripts/lists/lists.factory.js"></script>
 
     <script src="scripts/items/items.controller.js"></script>
