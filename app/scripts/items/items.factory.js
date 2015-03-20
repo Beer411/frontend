@@ -17,20 +17,20 @@
                 };
 
 			//get list of beers
-			var getBeerLists = function (listId) {
-				 return $http.get(SERVER.URL + 'beers', {
-				 	headers: SERVER.CONFIG.headers,
+			//var getBeerLists = function (listId) {
+			//	 return $http.get(SERVER.URL + 'beers', {
+			//	 	headers: SERVER.CONFIG.headers,
 
-				});
-			};
+			//	});
+			//};
 
 			//get list of bars
-			var getBarLists = function (listId) {
-				return $http.get(SERVER.URL + 'bars', {
-					headers: SERVER.CONFIG.headers,
+			//var getBarLists = function (listId) {
+			//	return $http.get(SERVER.URL + 'bars', {
+			//		headers: SERVER.CONFIG.headers,
 	
-				});
-			};
+			//	});
+			//};
 
 
 			//adding a beer
@@ -49,8 +49,8 @@
 
 
 			return {
-				getBeers: getBeerLists,
-				getBars: getBarLists,
+				//getBeers: getBeerLists,
+				//getBars: getBarLists,
 				addBeers: addBeer,
 				addBars: addBar,
 				user : currentUser

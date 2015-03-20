@@ -16,16 +16,16 @@
 			
 			
 
-				ItemsFactory.getBeers().success( function (response) {
-        			$scope.items = response.beer;
-        			//console.log(response.beer);
-      				});
+				//ItemsFactory.getBeers().success( function (response) {
+        		//	$scope.items = response.beer;
+        		//	//console.log(response.beer);
+      			//	});
 
 
-				ItemsFactory.getBars().success( function (response) {
-			  		$scope.items = response.bar;
-			  		console.log(response.bar);
-			  		});
+				//ItemsFactory.getBars().success( function (response) {
+			  	//	$scope.items = response.bar;
+			  	//	console.log(response.bar);
+			  	//	});
 
 			 	//adding Beers
 			  	$scope.addBeers = function(itemObj) {
