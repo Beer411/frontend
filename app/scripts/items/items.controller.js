@@ -36,7 +36,7 @@
 			  			$scope.items.push(itemObj);
 			  			}
 			  		);
-			  	}
+			  	};
 
 			  	//adding Bars
 				$scope.addBars = function(itemObj) {
