@@ -58,13 +58,17 @@
             controller: 'ItemsCtrl'
           })
 
-          //shows a single beer when clicked on the List view
-          .when('/beers/:id', {
-           templateUrl: '/scripts/lists/Beer/Beer.tpl.html',
-           controller: 'ListsBeersCtrl'
-          })
+          //show a single beer
+          //.when('/showBeer/:id', {
+          //  templateUrl: 'scripts/items/items.singleBeer.lists.tpl.html',
+           // controller: 'ItemsCtrl'
+          //}) 
 
-         
+          //show a single bar
+          //.when('/showBar/:id', {
+          //  templateUrl: 'scripts/items/items.singleBeer.lists.tpl.html',
+          //  controller: 'ItemsCtrl'
+          //})
         // Go Home ET
         .otherwise('/');
    

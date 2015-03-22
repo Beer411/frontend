@@ -1,12 +1,12 @@
 <h2>Beer411 lists</h2>
 
-<input ng-click="getBars" type="text" ng-model="searchtext" placeholder="Filter" ng-controller="ListBarsCtrl">
+<input type="text" ng-model="searchtext" placeholder="Search for a bar">
 
 <hr>
 	
 	<ul class="lists">
 	<!--<p>Lists {{ lists }}</p>-->
-  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.objectId }}">{{ l.name }}<br>{{l.address}}</a> 
+  		 <li ng-repeat="l in lists | filter:searchtext"><a href="#/lists/{{ l.objectId }}">{{ l.name }}<br>{{l.address}}</a> 
   		 </li>   
 	</ul>
 

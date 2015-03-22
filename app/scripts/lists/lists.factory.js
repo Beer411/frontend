@@ -26,26 +26,15 @@
 					});
 				};
 
-				//get a single Beer
-				var showSingleBeer = function (itemObj, id) {
-					return $http.get(SERVER.URL + 'beers/' + id, itemObj, {
 
-					});
-				};
-				//get a single Bar
-				var showSingleBar = function (itemObj) {
-					return $http.get(SERVER.URL + 'bars/:id', itemObj, {
-
-					});
-				};
-				
-
+			
 
 				return {
 					getBars : getBarLists,
 					getBeers : getBeerLists,
-					showBeer : showSingleBeer,
-					showBar : showSingleBar
+					//show : showBeer
+					///showBeer : showSingleBeer,
+					//showBar : showSingleBar
 				};      			
 
 			}

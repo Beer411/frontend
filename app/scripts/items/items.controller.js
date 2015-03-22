@@ -10,22 +10,9 @@
 			function ($scope, ItemsFactory, $routeParams) {
 
 
-				$scope.getBeers = '';
-				$scope.getBars = '';
+				//$scope.getBeers = '';
+				//$scope.getBars = '';
 				$scope.items = [];
-			
-			
-
-				//ItemsFactory.getBeers().success( function (response) {
-        		//	$scope.items = response.beer;
-        		//	//console.log(response.beer);
-      			//	});
-
-
-				//ItemsFactory.getBars().success( function (response) {
-			  	//	$scope.items = response.bar;
-			  	//	console.log(response.bar);
-			  	//	});
 
 			 	//adding Beers
 			  	$scope.addBeers = function(itemObj) {
@@ -46,16 +33,32 @@
 						$scope.items.push(itemObj);
 
 						}
-
 					);
 				};
+				//getting a single beer
+				//$scope.showBeer = function (itemObj) {
+				//	ItemsFactory.showBeer(itemObj)
+				//	.success( function (res) {
+				//		$scope.item = {};
+				//		$scope.items.get(itemObj);
+				//	});
+				//};
 
-			  }
+				//getting a single bar
+				//$scope.showBar = function (itemObk) {
+				//	ItemsFactory.showBar(itemObj)
+				//	.success( function (res) {
+				//		$scope.item = {};
+				//		$scope.items.get(itemObj);
+				//	});
+				//};
+
+		  
 
 
 
+		  }
 
 		])
 	
-
 }());
