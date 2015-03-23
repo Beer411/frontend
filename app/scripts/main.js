@@ -58,11 +58,17 @@
             controller: 'ItemsCtrl'
           })
 
+          //add comments
+          .when('/addComments', {
+            templateUrl: 'scripts/comments/comments.Beers.tpl.html',
+            controller: 'ComCtrl'
+          })
+
           //show a single beer
-          //.when('/showBeer/:id', {
-          //  templateUrl: 'scripts/items/items.singleBeer.lists.tpl.html',
-           // controller: 'ItemsCtrl'
-          //}) 
+          .when('/getBeer', {
+           templateUrl: 'scripts/items/lists.getBeer.tpl.html',
+            controller: 'ListBeersCtrl'
+          }) 
 
           //show a single bar
           //.when('/showBar/:id', {

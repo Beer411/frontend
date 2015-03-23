@@ -26,6 +26,8 @@
 				//console.log(itemObj);
 				return $http.post(SERVER.URL + 'bars', itemObj, SERVER.CONFIG);	
 			};
+
+			
 			
 
 			

@@ -25,6 +25,18 @@
 						//cache: true
 					});
 				};
+				//get single beer info
+				var getSingleBeer = function (l) {
+					console.log(l);
+					return $http.get(SERVER.URL + 'beers/' + l.id);
+				};
+
+				//get single bar info
+				var getSingleBar = function (l) {
+					return $http.get(SERVER.URL + 'bars/' +l.id);
+				};
+				
+
 
 
 			
@@ -32,9 +44,7 @@
 				return {
 					getBars : getBarLists,
 					getBeers : getBeerLists,
-					//show : showBeer
-					///showBeer : showSingleBeer,
-					//showBar : showSingleBar
+					getBeer : getSingleBeer
 				};      			
 
 			}

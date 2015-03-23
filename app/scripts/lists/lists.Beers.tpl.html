@@ -1,13 +1,13 @@
 <h2>Beer411 lists</h2>
 
-<input type="text" ng-model="searchtext" placeholder="Search for a beer">
+<input type="text" ng-model="searchtext" placeholder="Enter Beer name or type">
+
 
 <hr>
 
 	<ul class="lists" ng-controller="ListBeersCtrl">
 	<p>Lists: {{ lists }}</p>
-  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.id }}">Name: {{ l.name }} <br> Id: {{ l.id }} <br> Description: {{ l.description }} <br> Brewery: {{ l.brewery }} <br> Flavor Profile 1: {{ l.flavor_profile1 }} Flavor Profile 2: {{ l.flavor_profile2 }} Flavor Profile 3: {{ flavor_profile3}} Flavor Profile 4: {{  flavor_profile4}} Flavor Profile 5: {{ flavor_profile5}}</a>
-  		 <br>
-  		 <button ng-click="showBeer()" nav-controller="ItemsCtrl">select</button>
+  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.id }}"> {{ l.name }} <br> </a>
+  		 <button ng-click="getBeer(l)">{{l.name}}</button>
   		 </li>   
 	</ul>

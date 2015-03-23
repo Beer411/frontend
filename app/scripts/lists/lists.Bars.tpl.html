@@ -6,8 +6,7 @@
 	
 	<ul class="lists">
 	<!--<p>Lists {{ lists }}</p>-->
-  		 <li ng-repeat="l in lists | filter:searchtext"><a href="#/lists/{{ l.objectId }}">{{ l.name }}<br>{{l.address}}</a> 
-  		 </li>   
+  		 <li ng-repeat="l in lists | filter:searchtext"><a href="#/lists/{{ l.objectId }}">{{ l.name }}</a><br>  
+  		 <button ng-click="getBar(l)">{{l.name}}</button>
+  		 </li> 
 	</ul>
-
-	

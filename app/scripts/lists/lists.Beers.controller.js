@@ -17,6 +17,16 @@
 					console.log(response.beer);
 					});
 
+         			//show single beer from list
+					$scope.getBeer = function (l) {
+						ListsFactory.getBeer(l)
+						.success (function (res) {
+							console.log(res);
+						});
+
+					};
+					
+
 
         }
 
