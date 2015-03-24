@@ -1,13 +1,15 @@
 <h2>Beer411 lists</h2>
 
-<input type="text" ng-model="searchtext" placeholder="Enter Beer name or type">
+<input type="text" ng-model="searchtext" placeholder="Enter search information" ng-controller="ListBeersCtrl">
 
 
 <hr>
 
-	<ul class="lists" ng-controller="ListBeersCtrl">
-	<p>Lists: {{ lists }}</p>
-  		 <li ng-repeat="l in lists | filter:searchtext | orderBy: 'name' "><a href="#/lists/{{ l.id }}"> {{ l.name }} <br> </a>
-  		 <button ng-click="getBeer(l)">{{l.name}}</button>
-  		 </li>   
-	</ul>
+	<ul class="lists">
+	
+  		 <li ng-repeat="l in lists | filter:searchtext"><a href="#/Beers/{{ l.id }}">{{ l.name }}</a><br>  
+  		 	
+  		  <a ng-click="getBeer(l)" href="#/beer/{{ l.id }}" class="button alert" ng-controller="ListSingleBeerCtrl">{{ l.name }}</a>
+
+  		 </li>    
+	</ul>`

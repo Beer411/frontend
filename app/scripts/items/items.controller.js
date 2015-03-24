@@ -35,23 +35,7 @@
 						}
 					);
 				};
-				//getting a single beer
-				//$scope.showBeer = function (itemObj) {
-				//	ItemsFactory.showBeer(itemObj)
-				//	.success( function (res) {
-				//		$scope.item = {};
-				//		$scope.items.get(itemObj);
-				//	});
-				//};
-
-				//getting a single bar
-				//$scope.showBar = function (itemObk) {
-				//	ItemsFactory.showBar(itemObj)
-				//	.success( function (res) {
-				//		$scope.item = {};
-				//		$scope.items.get(itemObj);
-				//	});
-				//};
+				
 
 		  
 

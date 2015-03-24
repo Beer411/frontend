@@ -17,14 +17,14 @@
 					});
 
 
-					//show single beer from list
-					$scope.getBar = function (l) {
-						ListsFactory.getBeer(l)
-						.success (function (res) {
-							console.log(res);
-						});
+						//show single beer from list
+					//$scope.getBar = function (l) {
+					//   ListsFactory.getBar(l)
+					//	.success (function (res) {
+					//		console.log(res);
+					//	});
 
-					};
+					//};
 
 		}
 	])

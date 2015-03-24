@@ -65,10 +65,17 @@
           })
 
           //show a single beer
-          .when('/getBeer', {
-           templateUrl: 'scripts/items/lists.getBeer.tpl.html',
-            controller: 'ListBeersCtrl'
-          }) 
+           .when('/beers/:id', {
+            templateUrl: '/scripts/lists/lists.getBeer.tpl.html',
+            controller: 'ListSingleBeerCtrl'
+          })
+
+          //show a single bar
+          .when('/bars/:id', {
+            templateUrl: 'scripts/lists/lists.getBar.tpl.html',
+            controller: 'ListSingleBarCtrl'
+          })
+
 
           //show a single bar
           //.when('/showBar/:id', {
