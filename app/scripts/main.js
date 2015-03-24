@@ -59,19 +59,19 @@
           })
 
           //add comments
-          .when('/addComments', {
-            templateUrl: 'scripts/comments/comments.Beers.tpl.html',
-            controller: 'ComCtrl'
-          })
+         // .when('/addComments', {
+          //  templateUrl: 'scripts/comments/comments.Beers.tpl.html',
+         //   controller: 'ComCtrl'
+         // })
 
           //show a single beer
-           .when('/beers/:id', {
+           .when('/beer/:id', {
             templateUrl: '/scripts/lists/lists.getBeer.tpl.html',
             controller: 'ListSingleBeerCtrl'
           })
 
           //show a single bar
-          .when('/bars/:id', {
+          .when('/bar/:id', {
             templateUrl: 'scripts/lists/lists.getBar.tpl.html',
             controller: 'ListSingleBarCtrl'
           })
@@ -83,7 +83,7 @@
           //  controller: 'ItemsCtrl'
           //})
         // Go Home ET
-        .otherwise('/');
+        //.otherwise('/');
    
   }])
         .run([ '$rootScope', 'UserFactory', 'SERVER',

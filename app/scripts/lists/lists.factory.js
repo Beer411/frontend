@@ -29,7 +29,7 @@
 				//get single beer info
 				var getSingleBeer = function (l) {
 					console.log(l);
-					return $http.get(SERVER.URL + 'beers/' + l.id);
+					return $http.get(SERVER.URL + 'beers/' + l);
 				};
 				//get single bar info
 				var getSingleBar = function (l) {

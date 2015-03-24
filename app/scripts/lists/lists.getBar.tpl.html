@@ -1,12 +1,18 @@
 <h2>Single Bar View</h2>
 
-<ul class="lists" ng-controller="ListSingleBeerCtrl">
+<ul class="lists" ng-controller="ListSingleBarCtrl">
 
-	 <li ng-repeat="l in lists"><a href="#/bar/{{ l.id }}"></a>
+	 <li ng-repeat="l in lists">
   		 		
-  		 	<li ng-repeat="b in l.bar"><a href="#/bar/{{ l.id }}">{{ l.name }}</li> 
+  		 	<li ng-repeat="b in l.bar">{{ bar.name }} 
 
-            <li ng-repeat="beer in bar"><a href="#/bar/{{ l.id }}">{{ l.name }}</li>
+            		<li ng-repeat="beer in bar"></li>
+
+            </li>
+
+      </li>
+
+</ul>
 
 	
 

@@ -8,25 +8,14 @@
 
 			function ($scope, ListsFactory, $routeParams, $location) {
 
-				$scope.lists = [];
-			 	$routeParams.id;
-			 		
+			 	var beerId = $routeParams.id;
 
-         			//ListsFactory.getBeers().success( function (response) {
-					//$scope.lists = response.beer;
-					//console.log(response.beer);
-					//});
+				ListsFactory.getBeer(beerId)
+				.success (function (res) {
+					$scope.beer = res.beer;
+					$scope.bars = res.bars;
 
-         			//show single beer from list
-					$scope.getBeer = function (l) {
-					  console.log(l);
-					   ListsFactory.getBeer(l)
-						.success (function (res) {
-							console.log(res);
-
-						});
-
-					};
+				});
 					
 
 
