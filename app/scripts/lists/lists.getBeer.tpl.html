@@ -1,17 +1,20 @@
-<h2>Beer View</h2>
+<h3>Beer View</h3>
 
 
 <ul class="singleBeer">
 
- 	<li>{{ beer.name }}</li>
-<li>{{ beer.brewery }}</li>
+ 	<li>Name: {{ beer.name }}</li>
+	<li>Brewery: {{ beer.brewery }}</li>
+	<li>Kind: {{ beer.kind }}</li>
+	<li>Description: {{ beer.description }}</li>
 
 </ul>
 
 
-<h2>Bars</h2>
+<h3>Bars</h3>
 
 
  <ul class="singleBeer">
- 	<li ng-repeat="bar in bars">{{ bar.name }}</li>
+ 	<li ng-repeat="bar in bars">{{ bar.name }} <br> {{ bar.address }}</li>
+
  </ul>

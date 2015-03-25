@@ -9,25 +9,15 @@
 
 				function ($scope, ListsFactory, $routeParams, $location) {
 
-					$scope.lists = [];
-					$routeParams.id;
+			 		var barId = $routeParams.id;
 
-					ListsFactory.getBars().success( function (response) {
-					$scope.lists = response.bar;
-		
-					});
+						ListsFactory.getBar(barId)
+							.success (function (res) {
+								console.log(res);
+								$scope.bar = res.bar;
+								$scope.beers = res.beers;
 
-
-         			
-					$scope.getBar = function (l) {
-					  
-					   ListsFactory.getBar(l)
-						.success (function (res) {
-							console.log(res);
-
-						});
-
-					};
+								});
 					
 
 
