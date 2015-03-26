@@ -1,0 +1,15 @@
+<h2>Beer411 lists</h2>
+
+<input type="text" ng-model="searchtext" placeholder="Search for a bar">
+
+<hr>
+	
+	<ul class="lists">
+	<!--<p>Lists {{ lists }}</p>-->
+  		 
+  		 <li ng-repeat="l in lists | filter:searchtext"><a href="#/Bars/{{ l.id }}">{{ l.name }}</a><br>  
+  		 	
+  		  <a ng-click="getBar(l)" href="#/bar/{{ l.id }}" class="button alert" ng-controller="ListSingleBarCtrl">{{ l.name }}</a>
+
+  		 </li>    
+	</ul>

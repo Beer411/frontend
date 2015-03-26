@@ -1,0 +1,44 @@
+<h3>Beer View</h3>
+
+
+<ul class="singleBeer">
+
+ 	<li>Name: {{ beer.name }}</li>
+	<li>Brewery: {{ beer.brewery }}</li>
+	<li>Kind: {{ beer.kind }}</li>
+	<li>Description: {{ beer.description }}</li>
+
+</ul>
+
+
+<h3>Bars</h3>
+
+
+ <ul class="singleBeer">
+ 	<li ng-repeat="bar in bars">{{ bar.name }} <br> {{ bar.address }}</li>
+ </ul>
+
+ <div class='oneBar'>
+ 	<h4>Add a Bar from our list</h4>
+		
+		<form ng-submit="addBar(bar)" ng-controller= "ascBarCtrl">
+  			<input ng-model= "bar.name" type="text" placeholder="Name of Bar">
+  			<button>Add Bar</button>
+		</form>	
+		
+
+
+
+		<!--<ul>
+			<li><a ng-click="getBar(l)"  class="button alert" ng-controller="ascBarCtrl">Add a Bar</a></li>
+		</ul>-->
+			
+
+
+
+
+		<!--<form ng-submit="addBar(item)" ng-controller= "ascBarCtrl">
+  			<input ng-model= "item.name" type="text" placeholder="Name of Bar">
+  			<button>Add Bar</button>
+		</form>-->
+ </div>
