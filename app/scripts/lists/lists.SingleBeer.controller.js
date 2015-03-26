@@ -12,7 +12,7 @@
 
 				ListsFactory.getBeer(beerId)
 				.success (function (res) {
-					console.log(res);
+					//console.log(res);
 					$scope.beer = res.beer;
 					$scope.bars = res.bars;
 

@@ -5,7 +5,7 @@
 // Custom Styles
 
 body {
-	//background-image: url("http://static.squarespace.com/static/51d25265e4b065321a7daf2e/t/51e3202ce4b0e2abc3eb1d1e/1373839404916/Beer-paddle.jpg");
+	background-image: url("http://static.squarespace.com/static/51d25265e4b065321a7daf2e/t/51e3202ce4b0e2abc3eb1d1e/1373839404916/Beer-paddle.jpg");
 }
 	
 
@@ -24,7 +24,33 @@ body {
 .row {
   text-align: center;
   color: black;
+
 }
+
+.header {
+  background-color: #EB8E15;
+}
+
+
+
+.header h2 {
+  color: white;
+  border-style: solid;
+  border-width: medium;
+
+  
+}
+
+ .logoimg {
+  display: block;
+  height: 420px;
+  width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
 
 .large-12 { 
   display: inline-block;
@@ -41,6 +67,10 @@ body {
 
 .large-12 h3 {
   color: black;
+}
+
+.small-12 {
+  margin-top: 100px;
 }
 
 .Left {
@@ -85,7 +115,16 @@ body {
 }
 
 .ng-scope ul {
+  border-style: solid;
+  border-width: medium;
+  border-color: black;
   
+}
+
+.ng-scope li {
+  border-style: solid;
+  border-width: thin medium thin medium;
+  border-color: black;
 }
 
 
@@ -122,6 +161,10 @@ body {
   color: black;
 }
 
+h4 {
+  color: black;
+}
+
 .singleBar li {
   color: black;
   display: block;
@@ -133,9 +176,22 @@ body {
 
 .singleBar h3 {
   color: black;
+}
 
+.oneBeer h4 {
+  color: black;
+}
 
+.footer .small-12 {
+  text-align: center;
+  width: 1000px;
+  display: inline-block;
+  border-style: solid;
+  border-width: thin;
+  border-color: black;
+  background-color: #E8E8CF;
 
+}
 
 
 

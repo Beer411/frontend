@@ -10,14 +10,17 @@
 				function ($scope, ListsFactory, $routeParams, $location) {
 
 			 		var barId = $routeParams.id;
+			 		
 
 						ListsFactory.getBar(barId)
 							.success (function (res) {
-								console.log(res);
+								//console.log(res);
 								$scope.bar = res.bar;
 								$scope.beers = res.beers;
 
 								});
+
+
 					
 
 

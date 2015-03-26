@@ -8,8 +8,21 @@
 
 <h3>Beers</h3>
 
- 	<ul class="singleBeer">
+ 	<ul class="singleBar">
  		<li ng-repeat="beer in beers">{{ beer.name }}</li>
  	</ul>
+
+
+
+<div class="oneBeer">
+	<h4>Add a Beer from our list</h4>
+			
+			<form ng-submit="getBeer(l)" ng-controller="ascBeerCtrl">
+	  			<input ng-model="item.name" type="text" placeholder="Name of Beer">
+	  			<button>Add Beer</button>
+			</form>
+
+</div>
+
 
 	

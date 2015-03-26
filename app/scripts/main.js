@@ -76,13 +76,6 @@
             controller: 'ListSingleBarCtrl'
           })
 
-
-          //show a single bar
-          //.when('/showBar/:id', {
-          //  templateUrl: 'scripts/items/items.singleBeer.lists.tpl.html',
-          //  controller: 'ItemsCtrl'
-          //})
-        // Go Home ET
         //.otherwise('/');
    
   }])

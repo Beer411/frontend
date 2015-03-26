@@ -1,4 +1,4 @@
-;(function () {
+; (function () {
 
 	'use strict'
 
@@ -8,17 +8,16 @@
 
 			function ($http, SERVER, UserFactory) {
 
-
-				var user = UserFactory.user();
+var user = UserFactory.user();
+				
 				
 				//get list of beers
 				var getBeerLists = function () {
 					 return $http.get(SERVER.URL + 'beers', {
           				//cache: true
-				});
-			};
+					});
+				};
 				
-
 				//get list of bars
 				var getBarLists = function () {
 					return $http.get(SERVER.URL + 'bars', {
@@ -28,6 +27,7 @@
 				
 				//get single beer info
 				var getSingleBeer = function (l) {
+					//console.log(l);
 					return $http.get(SERVER.URL + 'beers/' + l);
 				};
 				//get single bar info
