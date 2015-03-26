@@ -1,0 +1,9 @@
+<h2>Add Comments</h2>
+<form ng-submit="addComments(item)" ng-controller="ComCtrl">
+    Post Your Comment
+      <div class="small-5 columns">
+        <textarea ng-model="txtcomment" placeholder="your comment on this beer"></textarea>
+        <button ng-click='btn_add();' style='margin-top:10px;'>Post Comment</button>
+        <h3>Comments</h3>
+      </div>
+</form>
